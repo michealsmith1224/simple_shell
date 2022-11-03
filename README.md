@@ -10,8 +10,9 @@
   **simple_shell** - command
   interpreter (shell)
   
-  #SYNOPSIS
+  # SYNOPSIS
   **simple_shell** [command_file]
-  #DESCRIPTION
+  
+  # DESCRIPTION
   **simple_shell** 
   is custom command interpreter for the system.
