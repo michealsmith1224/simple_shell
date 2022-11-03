@@ -5,3 +5,13 @@
   <br>
   
   <h1><p align="center"> The Gate of Simple Shell</h></p>
+  
+  # NAME
+  **simple_shell** - command
+  interpreter (shell)
+  
+  #SYNOPSIS
+  **simple_shell** [command_file]
+  #DESCRIPTION
+  **simple_shell** 
+  is custom command interpreter for the system.
