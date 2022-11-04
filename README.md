@@ -6,7 +6,7 @@
   
   <h1><p align="center"> The Gate of Shell</h></p></font>
   
- # NAME
+ ## NAME
   **simple_shell** - command
   interpreter (shell)
   
