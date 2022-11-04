@@ -37,8 +37,8 @@ typedef struct cmd_lst_s
 typedef struct	cmd_lst_lst_s
 {
 		char *list;
-		cmd_lst_t	*head;
-		struct cmd_lst_lst_s	*next;
+		cmd_lst_t *head;
+		struct cmd_lst_lst_s *next;
 }	cmd_lst_lst_t;
 
 int	add_cmd_lst(char *cmd, cmd_lst_t **head, char flag);
