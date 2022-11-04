@@ -27,4 +27,21 @@ typedef struct cmd_lst_s
   struct cmd_ls_s *prev;
 } cmd_list_t;
 
+/**
+  * struct cmd_lst_lst_s - the list of control op cutted list of cmd
+  * @list: the former string
+  * @head: the first element of it' s cmd_lst_s ll
+  * @next: the next element in the ll
+  **/
+
+typedef struct	cmd_lst_lst_s
+{
+		char *list;
+		cmd_lst_t	*head;
+		struct cmd_lst_lst_s	*next;
+}	cmd_lst_lst_t;
+
+int	add_cmd_lst(char *cmd, cmd_lst_t **head, char flag);
+int	strsplit(cmd_lst_lst_t *llav, char *str);
+
 #endif /* SIMPLESHELL_H */
