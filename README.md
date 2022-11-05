@@ -61,3 +61,11 @@
   Shell builtins are executed internally to the shell, without spawning a new process.
 
   Otherwise, the command is searched for as a normal program in the file system (as described in the next section). The shell will interpret the program in a subshell.
+
+  * **getline**
+  The ``getline()`` function is prototyped in the ``stdio.h`` header file.
+  * **threearguments**
+  * **&buffer**
+  * **&size**
+  * **stdin**
+  The getline function uses the realloc function to automatically increase the memory block as required, ensuring that there is never a space shortage. This is one of the explanations why getline is safe. The value returned inside the second parameter will also inform us of the new block size. It returns ``-1`` if an error appears, such as reaching the end of a file without receiving any bytes. Getline functions cease reading input from the stream when they meet a newline character or the end of a file.
