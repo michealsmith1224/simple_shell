@@ -1,6 +1,6 @@
 <p align="center">
   
-  <img src="the gate.jpg" width="400\"/>
+  <img src="the gate.jpg" width="600\"/>
   
   <br>
   
