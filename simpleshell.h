@@ -44,4 +44,8 @@ typedef struct	cmd_lst_lst_s
 int add_cmd_lst(char *cmd, cmd_lst_t **head, char flag);
 int strsplit(cmd_lst_lst_t *llav, char *str);
 
+/* SH_GETLINE  */
+int sh_getline(char **line, int fd);
+
+
 #endif /* SIMPLESHELL_H */
