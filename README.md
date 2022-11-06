@@ -5,6 +5,7 @@
   <br>
   
   <h1><p align="center"> The Gate of Shell</h></p></font>
+  <span style="font-size: 25px;">Rs</span> <span style="font-size: 50px;">2000/-</span>
   
  ## NAME
   **simple_shell** - command
