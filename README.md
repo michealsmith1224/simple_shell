@@ -4,7 +4,7 @@
   
   <br>
   
-  <h1><p align="center"> The Gate of Shell</h></p></font>
+  <h1><p align="center"> The Gates of Shell</h></p></font>
   
  ## NAME
   **simple_shell** - command
