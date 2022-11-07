@@ -61,7 +61,8 @@
   Shell builtins are executed internally to the shell, without spawning a new process.
 Otherwise, the command is searched for as a normal program in the file system (as described in the next section). The shell will interpret the program in a subshell.
   
-  * **getline**
+  * **Getline**
+  
   The ``getline()`` function is prototyped in the ``stdio.h`` header file.
   threre are three arguments
   ``&buffer``
