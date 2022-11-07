@@ -47,5 +47,10 @@ int strsplit(cmd_lst_lst_t *llav, char *str);
 /* SH_GETLINE  */
 int sh_getline(char **line, int fd);
 
+/* EXPANSION */
+int expansion(data_t *data, cmd_lst_lst_t **head);
+void expansion_path(char **arg, char *path_var);
+char *parse_env_var(char *s, char **env);
 
 #endif /* SIMPLESHELL_H */
+
