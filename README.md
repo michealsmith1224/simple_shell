@@ -60,8 +60,8 @@
 
   Shell builtins are executed internally to the shell, without spawning a new process.
 Otherwise, the command is searched for as a normal program in the file system (as described in the next section). The shell will interpret the program in a subshell.
-  
-  * **Getline**
+
+* **Getline**
   
   The ``getline()`` function is prototyped in the ``stdio.h`` header file.
   threre are three arguments
@@ -69,3 +69,33 @@ Otherwise, the command is searched for as a normal program in the file system (a
   ``&size``
   ``stdin``
  The getline function uses the realloc function to automatically increase the memory block as required, ensuring that there is never a space shortage. This is one of the explanations why getline is safe. The value returned inside the second parameter will also inform us of the new block size. It returns ``-1`` if an error appears, such as reaching the end of a file without receiving any bytes. Getline functions cease reading input from the stream when they meet a newline character or the end of a file.
+
+* **Path Search**
+
+  When locating a command, the shell first looks for a builtin command by that name. If a builtin command is not found, one of two things happen:
+  1) Command names containing a slash are simply executed without performing any searches.
+  2) The shell searches each entry in PATH in turn for the command. The value of the PATH variable should be a series of entries separated by colons. Each entry consists of a directory name. The current directory may be indicated implicitly by an empty directory name, or explicitly by a single period.
+
+* **Command Exit Status**
+
+  Each command has an exit status that can influence the behaviour of other shell commands. The paradigm is that a command exits with zero for normal or success, and non-zero for failure, error, or a false indication. The man page for each command should indicate the various exit codes and what they mean. Additionally, the builtin commands return exit codes, as does an executed shell function.
+
+* **Short-Circuit List Operators**
+
+  `&&` and `||` are AND-OR list operators. `&&` executes the first command, and then executes the second command if the exit status of the first command is zero. `||` is similar, but executes the second command if the exit status of the first command is nonzero.  `&&` and `||` both have the same priority.
+
+* **Special Parameters**
+
+  **?** - Expands to the exit status of the most recent pipeline.
+
+  **$** - Expands to the process ID of the invoked shell.  A subshell retains the same value of `$` as its parent.
+
+* **Parameter Expansion**
+
+  The format for parameter expansion is as follows:
+
+  ``$expression``
+
+* **White Space Splitting (Field Splitting)**
+
+  The shell treats each whitespace or tab to split the results of parameter expansion into fields.
