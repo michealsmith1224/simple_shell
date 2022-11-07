@@ -1,6 +1,22 @@
 #include "simpleshell.h"
 
 /**
+ * free_path - free the path
+ *
+ * @path: the path
+ * @i: the index to be deleted
+ */
+
+void free_path(char **path, int i)
+{
+	while (path && path[i])
+	{
+		free(path[i]);
+		i++;
+	}
+}
+
+/**
  * expansion_path - search is the first argument is an executable in the PATH
  * @arg: the first argument
  * @path_var: the PATH environment variable
