@@ -3,8 +3,13 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
 #define BUFSIZE 1024
 
 /**
@@ -43,6 +48,29 @@ typedef struct	cmd_lst_lst_s
 
 int add_cmd_lst(char *cmd, cmd_lst_t **head, char flag);
 int strsplit(cmd_lst_lst_t *llav, char *str);
+
+/**
+ * struct data_s - the data structure
+ *
+ * @env: environment
+ * @mode: interactive, non interactive or from file
+ * @bash: the argv[0]
+ * @alias: the aliases
+ * @line: the address of the getline line
+ * @lines: index of the executed line
+ * @llav_head: the head of the llav linked list
+ */
+
+typedef struct data_s
+{
+	char **env;
+	char **alias;
+	char **line;
+	int mode;
+	int lines;
+	char *bash;
+	cmd_lst_lst_t *llav_head;
+} data_t;
 
 /* SH_GETLINE  */
 int sh_getline(char **line, int fd);
