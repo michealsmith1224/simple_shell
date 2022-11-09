@@ -28,12 +28,12 @@
 
 typedef struct cmd_lst_s
 {
-  char *cmd;
-  char **av;
-  int exe;
-  char flag;
-  struct cmd_lst_s *next;
-  struct cmd_ls_s *prev;
+	char *cmd;
+	char **av;
+	int exe;
+	char flag;
+	struct cmd_lst_s *next;
+	struct cmd_ls_s *prev;
 } cmd_list_t;
 
 /**
@@ -86,6 +86,42 @@ char *parse_env_var(char *s, char **env);
 
 /* hand prompt to receive input */
 void prompt_user(void);
+
+/**
+ * struct flags - Holds flags
+ * @interactive: First member
+ *
+ * Description: used to handle
+ *
+ * boolean switches
+ */
+
+
+typedef struct flags
+{
+	bool interactive;
+} flags;
+
+
+
+/**
+ * struct info - Status info struct
+ * @final_exit: First member
+ * @ln_count: Second member
+ *
+ * Description: Used in error handling
+ */
+
+
+
+
+
+
+typedef struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
 
 #endif /* SIMPLESHELL_H */
 
