@@ -6,6 +6,10 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <stdarg.h>
+#include <time.h>
+#include <stdbool.h>
+#include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -79,6 +83,9 @@ int sh_getline(char **line, int fd);
 int expansion(data_t *data, cmd_lst_lst_t **head);
 void expansion_path(char **arg, char *path_var);
 char *parse_env_var(char *s, char **env);
+
+/* hand prompt to receive input */
+void prompt_user(void);
 
 #endif /* SIMPLESHELL_H */
 
