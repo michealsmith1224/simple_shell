@@ -80,5 +80,12 @@ int expansion(data_t *data, cmd_lst_lst_t **head);
 void expansion_path(char **arg, char *path_var);
 char *parse_env_var(char *s, char **env);
 
+/* PARSER */
+int add_cmd_lst(char *cmd, cmd_lst_t **head, char flag);
+int add_cmd_lst_lst(char *list, cmd_lst_lst_t **head);
+int parse_logic_op(cmd_lst_lst_t **llav_head);
+int parse_ctrl_op(char *input, cmd_lst_lst_t **head);
+int parser(char *input, cmd_lst_lst_t **llav_head);
+
 #endif /* SIMPLESHELL_H */
 
