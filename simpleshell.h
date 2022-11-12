@@ -87,5 +87,18 @@ int parse_logic_op(cmd_lst_lst_t **llav_head);
 int parse_ctrl_op(char *input, cmd_lst_lst_t **head);
 int parser(char *input, cmd_lst_lst_t **llav_head);
 
+/* UTIL_DATA */
+data_t *sh_data_new(char **argv, char **env);
+void *sh_data_delete(data_t *data);
+
+/* UTIL_ENV */
+char **sh_get_env(char **env);
+void sh_delete_env(char **env);
+char *sh_get_env_var(char *var, char **env);
+
+/* UTIL_MEM */
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+
+
 #endif /* SIMPLESHELL_H */
 
